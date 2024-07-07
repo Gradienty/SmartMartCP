@@ -1,0 +1,10 @@
+﻿<Page x:Class="KPT1.ProductPopularPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Популярные товары"
+      Height="400" Width="600">
+
+    <Grid>
+        <DataGrid x:Name="PopularGrid" AutoGenerateColumns="True"></DataGrid>
+    </Grid>
+</Page>

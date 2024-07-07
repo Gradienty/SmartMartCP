@@ -1,0 +1,21 @@
+﻿<Window x:Class="KPT1.LogWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KPT1"
+        mc:Ignorable="d"
+        Title="Войдите в аккаунт" Height="450" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center"  Margin="0, 40, 0, 0" Width="350px">
+            <TextBlock Text="Добро пожаловать!" Height="50" FontSize="20" HorizontalAlignment="Center"/>
+            <TextBlock Text="Логин:" HorizontalAlignment="Center"/>
+            <TextBox Name="LoginTextbox" MaxLength="30" TextChanged="LoginTextbox_TextChanged" />
+            <TextBlock Text="Пароль:"  HorizontalAlignment="Center"/>
+            <PasswordBox Name="Passwordbox" MaxLength="20" PasswordChanged="Passwordbox_PasswordChanged" />
+            <TextBox x:Name="PasswordTextBox" Visibility="Collapsed" MaxLength="20" />
+            <CheckBox Content="Показать пароль" Click="CheckBox_Click" Width="126"  x:Name="CheckBox"/>
+            <Button Content="Подтвердить" Name="LoginBtn" Click="Login"/>
+        </StackPanel>
+    </Grid>
+</Window>

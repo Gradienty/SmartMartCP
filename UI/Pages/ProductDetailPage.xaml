@@ -1,0 +1,56 @@
+﻿<Page x:Class="KPT1.ProductDetailPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KPT1"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="800"
+      Title="ProductDetailPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Детали продукта" FontSize="24" FontFamily="Comic Sans MS" HorizontalAlignment="Center" Margin="10"/>
+
+        <StackPanel Grid.Row="1" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Название товара: "  FontFamily="Comic Sans MS" FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding PName}" FontSize="14"  FontFamily="Comic Sans MS" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Цена: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Price, StringFormat=C}" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Описание: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Description}" FontSize="14" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Мощность (кВт): " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Power_KWT}" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Энергопотребление (кВт/ч): " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding EnergyConsumption_KWT_H}" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Гарантия (лет): " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Guaranty_Years}" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,5">
+                <TextBlock Text="Наличие: " FontWeight="Bold" Width="120"/>
+                <TextBlock Text="{Binding Availability}" FontSize="14"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
